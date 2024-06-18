@@ -2,7 +2,7 @@ vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the s
 
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
 
-
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                  -- set relative numbered lines
 
