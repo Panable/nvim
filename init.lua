@@ -16,3 +16,13 @@ vim.cmd[[
     autocmd FileType php lua vim.bo.autoindent = true
   augroup END
 ]]
+
+local isLspDiagnosticsVisible = true
+vim.keymap.set("n", "<leader>lx", function()
+    isLspDiagnosticsVisible = not isLspDiagnosticsVisible
+    vim.diagnostic.config({
+        virtual_text = isLspDiagnosticsVisible,
+        underline = isLspDiagnosticsVisible
+    }) end)
+
+vim.opt.laststatus = 0
