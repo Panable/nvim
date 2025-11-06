@@ -200,6 +200,7 @@ return {
 			"lua-language-server",
 			"markdownlint",
 			"netcoredbg",
+			-- "csharp_ls",
 			"omnisharp",
 			"phpactor",
 			"prettier",
