@@ -62,6 +62,7 @@ return {
       },
     },
     heading = {
+      enabled = false,
       sign = false,
       position = 'overlay',
       left_margin = 0,
