@@ -41,3 +41,11 @@ vim.api.nvim_create_user_command("ClearHighlights", function()
 end, {})
 
 vim.cmd("ClearHighlights");
+
+-- Markdown heading colors (treesitter highlight groups)
+vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { fg = "#ffdd33", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { fg = "#73c936", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { fg = "#96a6c8", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { fg = "#cc8c3c", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { fg = "#95a99f", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { fg = "#9e95c7", bold = true })

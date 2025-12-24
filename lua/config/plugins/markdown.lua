@@ -20,30 +20,28 @@ return {
   opts = {
     bullet = {
       -- Turn on / off list bullet rendering
-      enabled = true,
+      enabled = false,
     },
     checkbox = {
-      -- Turn on / off checkbox state rendering
       enabled = true,
-      -- Determines how icons fill the available space:
-      --  inline:  underlying text is concealed resulting in a left aligned icon
-      --  overlay: result is left padded with spaces to hide any additional text
-      position = "inline",
+      render_modes = false,
+      bullet = false,
+      left_pad = 0,
+      right_pad = 1,
       unchecked = {
-        -- Replaces '[ ]' of 'task_list_marker_unchecked'
-        icon = "󰄱 ",
-        -- Highlight for the unchecked icon
-        highlight = "RenderMarkdownUnchecked",
-        -- Highlight for item associated with unchecked checkbox
+        icon = '󰄱 ',
+        highlight = 'RenderMarkdownUnchecked',
         scope_highlight = nil,
       },
       checked = {
-        -- Replaces '[x]' of 'task_list_marker_checked'
-        icon = "󰱒 ",
-        -- Highlight for the checked icon
-        highlight = "RenderMarkdownChecked",
-        -- Hig|hlight for item associated with checked checkbox
+        icon = '󰱒 ',
+        highlight = 'RenderMarkdownChecked',
         scope_highlight = nil,
+      },
+      custom = {
+        todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+        unchecked = { raw = '[ ]', rendered = '󰄱 ', highlight = 'RenderMarkdownUnchecked', scope_highlight = nil },
+        checked = { raw = '[x]', rendered = '󰱒 ', highlight = 'RenderMarkdownChecked', scope_highlight = nil },
       },
     },
     html = {
@@ -56,35 +54,36 @@ return {
     },
     -- Add custom icons lamw26wmal
     link = {
+      enabled = true,
       image = vim.g.neovim_mode == "skitty" and "" or "󰥶 ",
       custom = {
         youtu = { pattern = "youtu%.be", icon = "󰗃 " },
       },
     },
     heading = {
-      enabled = false,
+      enabled = true,
       sign = false,
       position = 'overlay',
       left_margin = 0,
       left_pad = 0,
       right_pad = 0,
       width = 'full',
-      icons = { "󰎤 ", "󰎧 ", "󰎪 ", "󰎭 ", "󰎱 ", "󰎳 " },
+      icons = { "# ", "## ", "### ", "#### ", "##### ", "###### " },
       backgrounds = {
-        "Headline1Bg",
-        "Headline2Bg",
-        "Headline3Bg",
-        "Headline4Bg",
-        "Headline5Bg",
-        "Headline6Bg",
+        "RenderMarkdownH1Bg",
+        "RenderMarkdownH2Bg",
+        "RenderMarkdownH3Bg",
+        "RenderMarkdownH4Bg",
+        "RenderMarkdownH5Bg",
+        "RenderMarkdownH6Bg",
       },
       foregrounds = {
-        "Headline1Fg",
-        "Headline2Fg",
-        "Headline3Fg",
-        "Headline4Fg",
-        "Headline5Fg",
-        "Headline6Fg",
+        "RenderMarkdownH1",
+        "RenderMarkdownH2",
+        "RenderMarkdownH3",
+        "RenderMarkdownH4",
+        "RenderMarkdownH5",
+        "RenderMarkdownH6",
       },
     },
     code = {
