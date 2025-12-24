@@ -112,7 +112,7 @@ return {
 		-- ZLS (NOT Mason-managed) – use your system /usr/bin/zls
 		---------------------------------------------------------------------------
 		vim.lsp.config("zls", {
-			cmd = { "/usr/bin/zls" }, -- change if needed
+			cmd = { "/usr/bin/zls-master" }, -- change if needed
 			filetypes = { "zig", "zir" },
 			root_markers = {
 				"build.zig",
