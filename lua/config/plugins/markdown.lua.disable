@@ -23,7 +23,7 @@ return {
       enabled = false,
     },
     checkbox = {
-      enabled = true,
+      enabled = false,
       render_modes = false,
       bullet = false,
       left_pad = 0,
@@ -54,7 +54,7 @@ return {
     },
     -- Add custom icons lamw26wmal
     link = {
-      enabled = true,
+      enabled = false,
       image = vim.g.neovim_mode == "skitty" and "" or "󰥶 ",
       custom = {
         youtu = { pattern = "youtu%.be", icon = "󰗃 " },

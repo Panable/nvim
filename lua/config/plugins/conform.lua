@@ -22,11 +22,7 @@ return {
 			},
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
-			require("conform").format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
-			})
+			require("conform").format({ lsp_fallback = true, async = false, timeout_ms = 1000 })
 		end, { desc = "Format file or range (in visual mode)" })
 	end,
 }

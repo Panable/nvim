@@ -6,6 +6,9 @@ if cmp then
 	cmp.setup.buffer({ enabled = false })
 end
 
+-- Enable concealment for obsidian.nvim UI features
+vim.opt_local.conceallevel = 2
+
 -- Enable wrap and line breaking
 vim.opt_local.wrap = true
 vim.opt_local.linebreak = true
