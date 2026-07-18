@@ -33,6 +33,13 @@ return {
 				vmap("<F3>", vim.lsp.buf.code_action, "[C]ode [A]ction")
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+vim.keymap.set("n", "<leader>th", function()
+	local enabled = vim.lsp.is_enabled("harper_ls")
+
+	vim.lsp.enable("harper_ls", not enabled)
+
+	print("Harper LS " .. (not enabled and "enabled" or "disabled"))
+end, { desc = "Toggle Harper LS" })
 
 				-- local client = vim.lsp.get_client_by_id(event.data.client_id)
 				-- if client and client.server_capabilities.documentHighlightProvider then

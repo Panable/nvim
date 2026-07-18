@@ -13,5 +13,5 @@ return {
 			require("mini.ai").setup()
 		end,
 	},
-	-- { 'echasnovski/mini.comment', version = false },
+	{ 'echasnovski/mini.comment', version = '*' },
 }
