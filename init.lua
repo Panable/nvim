@@ -40,7 +40,25 @@ vim.api.nvim_create_user_command("ClearHighlights", function()
   vim.cmd("highlight SignColumn guibg=NONE ctermbg=NONE")
 end, {})
 
+vim.api.nvim_create_user_command("RestoreHighlights", function()
+vim.cmd("colorscheme " .. vim.g.colors_name)
+end, {})
+
 vim.cmd("ClearHighlights");
+
+vim.keymap.set("n", "<leader>co", function()
+	vim.cmd("ClearHighlights")
+	vim.fn.system("kitten @ set-background-opacity 0.9")
+end, {
+	desc = "Clear highlights and set kitty opacity",
+})
+
+vim.keymap.set("n", "<leader>ro", function()
+	vim.cmd("RestoreHighlights")
+	vim.fn.system("kitten @ set-background-opacity 1.0")
+end, {
+	desc = "Restore highlights and set kitty opacity",
+})
 
 -- Markdown heading colors (treesitter highlight groups)
 vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { fg = "#ffdd33", bold = true })
