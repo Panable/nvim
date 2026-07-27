@@ -15,10 +15,10 @@ vim.keymap.set("n", "<leader>lr", function()
 	})
 end)
 
+vim.opt.winborder = "rounded"
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
-
 
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                  -- set relative numbered lines
