@@ -4,7 +4,7 @@ This repository has been moved.
 
 The latest version of my Neovim configuration is now maintained as part of my dotfiles repository:
 
-https://github.com/Panable/Panable/dotfiles.git
+https://github.com/Panable/dotfiles
 
 Please use the new repository for the latest updates, fixes, and configuration changes.
 
